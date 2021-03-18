@@ -19,7 +19,7 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="brandon-nelson-2smDZopBMso-unsplash" translatesAutoresizingMaskIntoConstraints="NO" id="O0U-Hc-DRS">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="iconmonstr-cat-4-240" translatesAutoresizingMaskIntoConstraints="NO" id="vlB-DZ-GKV">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="whiteCat" translatesAutoresizingMaskIntoConstraints="NO" id="vlB-DZ-GKV">
                                 <rect key="frame" x="157" y="64" width="100" height="100"/>
                                 <color key="tintColor" systemColor="labelColor"/>
                                 <constraints>
@@ -35,7 +35,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad" enablesReturnKeyAutomatically="YES"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cXx-E8-y2M">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cXx-E8-y2M">
                                 <rect key="frame" x="20" y="436" width="374" height="72"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="60"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -57,6 +57,9 @@
                                 <state key="normal" title="다시 하기">
                                     <color key="titleColor" systemColor="labelColor"/>
                                 </state>
+                                <connections>
+                                    <action selector="reset:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JHc-kD-3Id"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="당신의 현재 시급을 입력하세요." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="M8Q-OJ-Oqt" customClass="cUITF" customModule="howManyTimeApp" customModuleProvider="target">
                                 <rect key="frame" x="20" y="284" width="374" height="50"/>
@@ -92,7 +95,11 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="hourLabel" destination="cXx-E8-y2M" id="cdU-iP-N6G"/>
                         <outlet property="myImg" destination="O0U-Hc-DRS" id="RbH-AU-yGP"/>
+                        <outlet property="priceLabel" destination="YFe-2e-v6R" id="BO5-o7-Utm"/>
+                        <outlet property="siganLabel" destination="8Si-1v-Z7P" id="IqK-mg-hUC"/>
+                        <outlet property="wageLabel" destination="M8Q-OJ-Oqt" id="gaG-kI-yaK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -102,7 +109,7 @@
     </scenes>
     <resources>
         <image name="brandon-nelson-2smDZopBMso-unsplash" width="2992" height="3992"/>
-        <image name="iconmonstr-cat-4-240" width="240" height="240"/>
+        <image name="whiteCat" width="240" height="240"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
